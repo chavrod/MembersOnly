@@ -1,7 +1,25 @@
 <div id="<%= dom_id post %>">
-  <p>
-    <strong>Post:</strong>
-    <%= post.post %>
-  </p>
-
+  <div class="container">
+    <article class="post vt-post">
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+              <div class="info">
+                <% if user_signed_in? %>
+                  <strong><%= post.user.username %></strong>
+                <% else %>
+                  <strong>Sign in!</strong>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8">
+              <div class="caption">
+                <h6 class="md-heading">Title</h6>
+                <p><%= post.post %></p>
+                <%= link_to "Show this post", post %>
+              </div>
+            </div>
+        </div>
+    </article> 
+  </div>
 </div>
+
