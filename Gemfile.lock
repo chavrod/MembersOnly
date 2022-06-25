@@ -101,6 +101,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-bootstrap-views (1.1.0)
     digest (3.1.0)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
@@ -281,6 +282,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   devise (~> 4.8, >= 4.8.1)
+  devise-bootstrap-views (~> 1.1)
   gravatar_image_tag (~> 1.2)
   guard (~> 2.18)
   guard-livereload (~> 2.5, >= 2.5.2)
