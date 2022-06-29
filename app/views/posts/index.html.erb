@@ -1,11 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Posts</h1>
-
-<div class="col-md-12 col-lg-12">
-  <% @posts.each do |post| %>
-    <%= render post %>
-  <% end %>
+<div class="container">
+  Posts
 </div>
 
-<%= link_to "New post", new_post_path %>
+
+<div class="container">
+    <div class="row border border-primary">
+      <% @posts.each do |post| %>
+        <div class="row border border-danger">
+          <%= render post %>
+        </div>
+      <% end %>
+    </div>
+    <%= link_to "New post", new_post_path %>
+</div>
+
+
