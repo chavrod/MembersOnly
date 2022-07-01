@@ -6,14 +6,25 @@
 
 
 <div class="container">
-    <div class="row border border-primary">
-      <% @posts.each do |post| %>
-        <div class="row border border-danger">
-          <%= render post %>
-        </div>
-      <% end %>
+  <%= link_to "New post", new_post_path %>
+  <% @posts.each do |post| %>
+    <div class="card w-100 my-4" style="width: 18rem;">
+      <div class="card-body">
+        <h3 class="card-title"><%= post.title %></h3>
+        <h6 class="card-subtitle mb-2 text-muted">
+          <% if post.unedited? %>
+            <%= post.unedited_history %>
+          <% else %>
+            <%= post.unedited_history %>
+            <i>(edited <%= post.edited_history %>)</i>
+          <% end %>
+        </h6>
+        <p class="card-text"><%= post.post %></p>
+        <%= link_to "Show this post", post, class: "btn btn-primary" %>
+      </div>
     </div>
-    <%= link_to "New post", new_post_path %>
+  <% end %>
 </div>
+
 
 
