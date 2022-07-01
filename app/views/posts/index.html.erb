@@ -19,7 +19,7 @@
             <i>(edited <%= post.edited_history %>)</i>
           <% end %>
         </h6>
-        <p class="card-text"><%= post.post %></p>
+        <p class="card-text"><%= truncate(post.post, length: 200) %></p>
         <%= link_to "Show this post", post, class: "btn btn-primary" %>
       </div>
     </div>
